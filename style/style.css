@@ -1,0 +1,40 @@
+.navbar {
+  margin: -8px;
+}
+
+#navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0073e6;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #004d99;
+}
+
+.cart-number {
+  padding: 3px;
+  font-size: 12px;
+  background-color: #ff6666;
+  border-radius: 2px;
+}
+
+.active {
+  background-color: #66b3ff;
+}
+
+/*GRID*/
