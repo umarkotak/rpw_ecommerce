@@ -11,6 +11,7 @@
       <!-- Users menu -->
       <li><a href="?page=products">Products</a></li>
       <li><a href="?page=carts">Shopping Carts <span class="cart-number"><?php echo $notification_item; ?></span></a></li>
+      <li><a href="?page=order_history">Order History</a></li>
 
       <!-- Admin menu -->
       <li><a href="?page=dashboard">Dashboard</a></li>

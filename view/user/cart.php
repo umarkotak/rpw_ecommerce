@@ -8,7 +8,7 @@
   </div>
 
   <div class="w3-col s8">
-    <form>
+    <form method="post" action="?page=action_checkout_order">
       <div style="background-color: #1a1a1a; color: white; padding: 1px; text-align: center;">
         <h3>Shoping Carts</h3>
         <b>This is all items you ordered</b>
@@ -50,6 +50,7 @@
 
       <br>
       <div style="float: right;">
+        <input type="hidden" name="total_price" value="<?php echo $total_price; ?>">
         <button name="submit" value="checkout_cart" class="button-1">Checkout Order</button>
       </div>
     </form>
@@ -59,5 +60,3 @@
     <p></p>
   </div>
 </div>
-
-

@@ -6,6 +6,7 @@ if (isset($_GET['page'])) {
 
   if ($_GET['page'] == 'products')                      { include "view/user/products.php"; }
   if ($_GET['page'] == 'carts')                         { include "view/user/cart.php"; }
+  if ($_GET['page'] == 'order_history')                 { include "view/user/order_history.php"; }
 
   if ($_GET['page'] == 'dashboard')                     { include "view/admin/dashboard.php"; }
   if ($_GET['page'] == 'add_items')                     { include "view/admin/add_items.php"; }
@@ -15,6 +16,7 @@ if (isset($_GET['page'])) {
   if ($_GET['page'] == 'action_signup')                 { include "model/register.php"; }
   if ($_GET['page'] == 'action_add_items')              { include "model/add_items.php"; }
   if ($_GET['page'] == 'action_add_item_to_cart')       { include "model/add_item_to_cart.php"; }
+  if ($_GET['page'] == 'action_checkout_order')         { include "model/checkout_order.php"; }
 } else {
   include "view/home.php";
 }
