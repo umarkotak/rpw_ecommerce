@@ -71,6 +71,18 @@ a:hover, a:active {
   background-color: black;
   border-radius: 2px;
 }
+
+.label-orange {
+  background-color: #ffad33; 
+  padding: 3px 7px; 
+  border-radius: 3px;
+}
+
+.label-green {
+  background-color: #00cc66; 
+  padding: 3px 7px; 
+  border-radius: 3px;
+}
 /*GRID*/
 
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}

@@ -17,6 +17,7 @@ if ($count==0) {
 } else {
   $_SESSION['notice'] = "Login success";
   $_SESSION['username'] = $username;
+  $_SESSION['user_id'] = $row->id;
   $_SESSION['auth'] = $row->status;
 
   header("location: ?page=home");
