@@ -8,14 +8,21 @@
     <ul>
       <li><a href="?page=home">Home</a></li>
 
-      <!-- Users menu -->
-      <li><a href="?page=products">Products</a></li>
-      <li><a href="?page=carts">Shopping Carts <span class="cart-number"><?php echo $notification_item; ?></span></a></li>
-      <li><a href="?page=order_history">Order History</a></li>
+      <?php if (isset($_SESSION['auth'])): ?>
+        <!-- Users menu -->
+        <?php if ($_SESSION['auth'] == 'user'): ?>
+          <li><a href="?page=products">Products</a></li>
+          <li><a href="?page=carts">Shopping Carts <span class="cart-number"><?php echo $notification_item; ?></span></a></li>
+          <li><a href="?page=order_history">Order History</a></li>
+        <?php endif ?>
 
-      <!-- Admin menu -->
-      <li><a href="?page=dashboard">Dashboard</a></li>
-      <li><a href="?page=add_items">Add Items</a></li>
+        <!-- Admin menu -->
+        <?php if ($_SESSION['auth'] == 'admin'): ?>
+          <li><a href="?page=dashboard">Dashboard</a></li>
+          <li><a href="?page=add_items">Add Items</a></li>
+        <?php endif ?>
+
+      <?php endif ?>
 
       <li><a href="?page=help">Help</a></li>
 
