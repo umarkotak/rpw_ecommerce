@@ -23,6 +23,7 @@
           <span style="float: right;">
             <b>Total Payment : </b><?php echo $order_history['total_price']; ?>
           </span>
+          <input type="hidden" name="umar">
         </div>
 
         <?php $order_details = get_order_details($order_history['id']) ?>
@@ -55,6 +56,7 @@
   </div>
 
   <div class="w3-col s2">
+    <input type="hidden" name="umar">
     <p></p>
   </div>
 </div>

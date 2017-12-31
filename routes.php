@@ -3,6 +3,7 @@ if (isset($_GET['page'])) {
   if ($_GET['page'] == 'home')                          { include "view/home.php"; }
   if ($_GET['page'] == 'login')                         { include "view/login.php"; }
   if ($_GET['page'] == 'signup')                        { include "view/signup.php"; }
+  if ($_GET['page'] == 'help')                          { include "view/help.php"; }
 
   if ($_GET['page'] == 'products')                      { include "view/user/products.php"; }
   if ($_GET['page'] == 'carts')                         { include "view/user/cart.php"; }

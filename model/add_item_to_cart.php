@@ -4,7 +4,13 @@ include 'connection.php';
 $orders_id = null;
 $users_id  = $_SESSION['user_id'];
 $items_id  = $_POST['items_id'];
-$quantity  = $_POST['quantity'];
+$quantity  = (int)$_POST['quantity'];
+
+if ($quantity < 1) {
+  $_SESSION['notice'] = 'Cannot add negative or zero quantity.';
+  header("location: ?page=products");
+  die();
+}
 
 $pdo = $conn->prepare('SELECT * FROM items WHERE id = :id');
 $pdo->execute(array(':id' => $items_id));
@@ -35,4 +41,10 @@ try {
   header("location: ?page=products");
 }
 
+?>
+
+<?php 
+function check_stock($item_id, $quantity) {
+  
+}
 ?>

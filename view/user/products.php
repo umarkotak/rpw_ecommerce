@@ -24,6 +24,7 @@
           <b>Rp.<?php echo $item['price']; ?>,00.-</b><hr>
           <b>Stock : <?php echo $item['stock']; ?></b><hr>
           <input type="hidden" name="items_id" value="<?php echo $item['id']; ?>">
+          <input type="hidden" name="quality_controller" value="umr">
           <input type="number" name="quantity" placeholder="Quantity" class="w3-input" required>
         </p>
         <button type="submit" name="submit" value="add_to_cart" class="button-1 button-block">Add to cart</button>

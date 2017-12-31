@@ -50,6 +50,7 @@
 
       <br>
       <div style="float: right;">
+        <input type="hidden" name="quality_controller_maker" value="mur">
         <input type="hidden" name="total_price" value="<?php echo $total_price; ?>">
         <button name="submit" value="checkout_cart" class="button-1">Checkout Order</button>
       </div>

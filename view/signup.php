@@ -6,6 +6,7 @@
 
   <div class="w3-col s2" style="text-align: center; border: 1px solid black;  ">
     <form action="?page=action_signup" method="post">
+      <input type="hidden" name="umar">
       <div style="background-color: #1a1a1a; color: white; padding: 1px;">
         <h4>Registration Page</h4>
       </div>
