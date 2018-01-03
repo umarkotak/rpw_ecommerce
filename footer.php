@@ -1,6 +1,4 @@
-<br>
-<div class="w3-row">
-  <div class="w3-col s12" style="text-align: center; border-top: 1px solid black;">
-    Copyright by M Umar Ramadhana | 2014 31 290 | STT - PLN Jakarta | 2017
-  </div>
+<br><br>
+<div class="w3-bar w3-green" style="margin-left: 200px; position: fixed; bottom: 0;">
+  Copyright by : M Umar Ramadhana | 2014 31 290 | STT - PLN Jakarta
 </div>

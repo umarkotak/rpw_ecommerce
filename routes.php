@@ -1,24 +1,36 @@
 <?php 
 if (isset($_GET['page'])) {
-  if ($_GET['page'] == 'home')                          { include "view/home.php"; }
-  if ($_GET['page'] == 'login')                         { include "view/login.php"; }
-  if ($_GET['page'] == 'signup')                        { include "view/signup.php"; }
-  if ($_GET['page'] == 'help')                          { include "view/help.php"; }
+// WEB ROUTING HERE
+  if ($_GET['page'] == 'home')                           { include "views/home.php"; }
+  if ($_GET['page'] == 'help')                           { include "views/help.php"; }
+  if ($_GET['page'] == 'login')                          { include "views/login.php"; }
+  if ($_GET['page'] == 'signup')                         { include "views/signup.php"; }
 
-  if ($_GET['page'] == 'products')                      { include "view/user/products.php"; }
-  if ($_GET['page'] == 'carts')                         { include "view/user/cart.php"; }
-  if ($_GET['page'] == 'order_history')                 { include "view/user/order_history.php"; }
+  if ($_GET['page'] == 'dashboard')                      { include "views/admin/dashboard.php"; }
+  if ($_GET['page'] == 'add_product')                    { include "views/admin/add_product.php"; }
+  if ($_GET['page'] == 'edit_product')                   { include "views/admin/edit_product.php"; }
 
-  if ($_GET['page'] == 'dashboard')                     { include "view/admin/dashboard.php"; }
-  if ($_GET['page'] == 'add_items')                     { include "view/admin/add_items.php"; }
+  if ($_GET['page'] == 'my_cart')                        { include "views/user/my_cart.php"; }
+  if ($_GET['page'] == 'order_food')                     { include "views/user/order_food.php"; }
+  if ($_GET['page'] == 'order_history')                  { include "views/user/order_history.php"; }
 
-  if ($_GET['page'] == 'action_login')                  { include "model/login.php"; }
-  if ($_GET['page'] == 'action_logout')                 { include "model/logout.php"; }
-  if ($_GET['page'] == 'action_signup')                 { include "model/register.php"; }
-  if ($_GET['page'] == 'action_add_items')              { include "model/add_items.php"; }
-  if ($_GET['page'] == 'action_add_item_to_cart')       { include "model/add_item_to_cart.php"; }
-  if ($_GET['page'] == 'action_checkout_order')         { include "model/checkout_order.php"; }
+} elseif (isset($_GET['action'])) {
+// WEB ACTION HERE
+  if ($_GET['action'] == 'login')                        { include "controllers/Sessions.php"; }
+  if ($_GET['action'] == 'logout')                       { include "controllers/Sessions.php"; }
+
+  if ($_GET['action'] == 'signup')                       { include "controllers/Users.php"; }
+
+  if ($_GET['action'] == 'checkout_order')               { include "controllers/Orders.php"; }
+
+  if ($_GET['action'] == 'add_to_cart')                  { include "controllers/Carts.php"; }
+  if ($_GET['action'] == 'remove_from_cart')             { include "controllers/Carts.php"; }
+
+  if ($_GET['action'] == 'add_product')                  { include "controllers/Products.php"; }
+  if ($_GET['action'] == 'edit_product')                 { include "controllers/Products.php"; }
+  if ($_GET['action'] == 'delete_product')               { include "controllers/Products.php"; }
+
 } else {
-  include "view/home.php";
+  include "views/home.php";
 }
 ?>
